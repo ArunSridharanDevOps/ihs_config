@@ -13,7 +13,7 @@ ihs_key_file = node[:ihs][:key_file]
 ihs_stash_file = node[:ihs][:stash_file]
 
 [ihs_docroot_dir, ihs_log_dir].each do |dirname|
-  directory dirnmae do
+  directory dirname do
     mode '755'
     recursive true
     owner node[:ihs][:user]
