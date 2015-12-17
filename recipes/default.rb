@@ -54,6 +54,13 @@ template "#{node[:ihs][:conf_dir]}/ssl.conf" do
   notifies :restart, 'service[ibm-http]', :delayed
 end
 
+template "#{node[:ihs][:docroot_dir]}/index.html" do
+  source index.html.erb
+  action :create
+  owner node[:ihs][:user]
+  group node[:ihs][:group]
+end
+
 service 'ibm-http' do
   supports :restart => true, :reload => true
   action :nothing
