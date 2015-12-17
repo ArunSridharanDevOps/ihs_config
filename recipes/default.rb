@@ -55,7 +55,7 @@ template "#{node[:ihs][:conf_dir]}/ssl.conf" do
 end
 
 template "#{node[:ihs][:docroot_dir]}/index.html" do
-  source index.html.erb
+  source 'index.html.erb'
   action :create
   owner node[:ihs][:user]
   group node[:ihs][:group]
