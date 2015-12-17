@@ -936,7 +936,7 @@ Include <%= node['ihs']['conf_dir'] %>/wasce.conf
 </IfModule>
 
 # WebSphere AJP plugin configuration
-LoadModule was_ap22_module <%= node['ihs']['plugin_dir'] %>/bin/mod_was_ap22_http.so
+LoadModule was_ap22_module <%= node['ihs']['plugin_dir'] %>/bin/64bits/mod_was_ap22_http.so
 #<IfModule mod_was_ap22_http.c>
 WebSpherePluginConfig <%= node['ihs']['conf_dir'] %>/plugin-cfg.xml
 #</IfModule>

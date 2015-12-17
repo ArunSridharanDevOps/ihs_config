@@ -6,13 +6,15 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-
+ihs_shared_path = node[:ihs][:paths][:shared]
+ihs_install_path = node[:ihs][:paths][:install]
+ihs_plugin_path = node[:ihs][:paths][:plugins]
 ihs_docroot_dir = node[:ihs][:docroot_dir]
 ihs_log_dir = node[:ihs][:log_dir]
 ihs_key_file = node[:ihs][:key_file]
 ihs_stash_file = node[:ihs][:stash_file]
 
-[ihs_docroot_dir, ihs_log_dir].each do |dirname|
+[ihs_shared_path, ihs_install_path, ihs_plugin_path, ihs_docroot_dir, ihs_log_dir].each do |dirname|
   directory dirname do
     mode '755'
     recursive true
