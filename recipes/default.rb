@@ -65,5 +65,5 @@ end
 
 service 'ibm-http' do
   supports :restart => true, :reload => true
-  action :nothing
+  action :start
 end
