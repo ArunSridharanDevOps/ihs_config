@@ -64,6 +64,6 @@ template "#{node[:ihs][:docroot_dir]}/index.html" do
 end
 
 service 'ibm-http' do
-  supports :restart => true, :reload => true
-  action :start
+  supports :status => true, :restart => true, :reload => true
+  action [ :enable, :start ]
 end
